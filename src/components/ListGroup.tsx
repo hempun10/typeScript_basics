@@ -1,8 +1,10 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
+
 const ListGroup = () => {
   const countries = ["Nepal", "India", "Japan", "china", "Bhutan"];
-  const handleClick = (event: MouseEvent) =>
-    console.log(event.target.addEventListener);
+  const [currentIndex, setIndex] = useState(0);
+  //   Event Handle
+  //   const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     <>
@@ -10,7 +12,15 @@ const ListGroup = () => {
       {countries.length == 0 && <p>No records found</p>}
       <ul className="list-group">
         {countries.map((country, index) => (
-          <li className="list-group-item" key={index} onClick={handleClick}>
+          <li
+            className={
+              currentIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={index}
+            onClick={() => setIndex(index)}
+          >
             {country}
           </li>
         ))}

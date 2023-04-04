@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 function App() {
   const countries = ["Nepal", "India", "Japan", "china", "Bhutan"];
@@ -13,6 +14,7 @@ function App() {
         heading={heading}
         onSelectedItem={handleSelectedItem}
       />
+      <Alert children={<span>Alert</span>} />
     </div>
   );
 }

@@ -37,7 +37,11 @@ function App() {
       <UpdateArr />
 
       <Nav itemCount={items.length} />
-      <Cart items={items} onClear={() => setItems([])} />
+      <Cart
+        items={items}
+        onRevert={() => setItems(["Apple", "BoAt", "Chewingum"])}
+        onClear={() => setItems([])}
+      />
     </div>
   );
 }

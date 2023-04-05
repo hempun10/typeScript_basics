@@ -1,4 +1,5 @@
 import { MouseEvent, useState } from "react";
+import styled from "styled-components";
 interface Props {
   countries: string[];
   heading: string;

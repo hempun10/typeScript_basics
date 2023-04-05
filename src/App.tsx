@@ -2,6 +2,7 @@ import { useState } from "react";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Like from "./components/Like";
 
 function App() {
   const [alertVibisble, setAlertVisible] = useState(false);
@@ -27,6 +28,8 @@ function App() {
         color="danger"
         onClickhandle={() => setAlertVisible(true)}
       />
+
+      <Like onhandleClick={() => console.log("Clicked")} />
     </div>
   );
 }

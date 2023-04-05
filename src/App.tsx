@@ -3,6 +3,7 @@ import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Like from "./components/Like";
+import UpdateArr from "./components/UpdateArr";
 
 function App() {
   const [alertVibisble, setAlertVisible] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       />
 
       <Like onhandleClick={() => console.log("Clicked")} />
+      <UpdateArr />
     </div>
   );
 }

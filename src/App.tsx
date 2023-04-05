@@ -4,12 +4,15 @@ import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Like from "./components/Like";
 import UpdateArr from "./components/UpdateArr";
+import Nav from "./components/Nav";
+import Cart from "./components/Cart";
 
 function App() {
   const [alertVibisble, setAlertVisible] = useState(false);
   const countries = ["Nepal", "India", "Japan", "china", "Bhutan"];
   const heading = `Countries`;
   const handleSelectedItem = (item: string) => console.log(item);
+  const [items, setItems] = useState(["Apple", "BoAt", "Chewingum"]);
 
   return (
     <div className="App">
@@ -32,6 +35,9 @@ function App() {
 
       <Like onhandleClick={() => console.log("Clicked")} />
       <UpdateArr />
+
+      <Nav itemCount={items.length} />
+      <Cart items={items} onClear={() => setItems([])} />
     </div>
   );
 }
